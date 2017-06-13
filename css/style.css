@@ -52,9 +52,11 @@ figure {
        -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.8);
+       -moz-box-shadow: 0 0 2px rgba(0,0,0,0.8);
+         -o-box-shadow: 0 0 2px rgba(0,0,0,0.8);
+            box-shadow: 0 0 2px rgba(0,0,0,0.8);
     
-
-
 }
 
 figure:hover figcaption {
@@ -78,6 +80,8 @@ figcaption {
 
 
 a[href="#body"] {
+    display: block;
+    height: 100%;
     color: white;
     text-decoration: none;
 }
@@ -142,12 +146,37 @@ a[href="#body"] {
     background-image: url('../img/USA.JPG');
 }
 
+.arrow, .arrow:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.arrow {
+    display: block;
+    left: 170px;
+    top: 347px;
+    border-width: 0 11px 11px 11px; 
+    border-color: transparent transparent #ccc transparent;
+}
+
+.arrow:after {
+    content: '';
+    display: block;
+    left: -8px;
+    top: 1px;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #f7f7f7 transparent;
+    z-index: 1;
+}
+
 .UA-d {
     position: absolute;
     background: #F7F7F7;
     border: 1px solid #CCC;
     width: 100%;
-    top: 350px;
+    top: 355px;
 }
 
 
@@ -210,6 +239,10 @@ address {
     width: 120%;
 }
 
+.phone span {
+    cursor: default;
+}
+
 .phone a:hover {
     text-decoration: none;
 }
@@ -230,6 +263,12 @@ address {
     height: 0;
     opacity: 0;
     transition: 0.4s;
+    display: none;
+}
+
+#body:not(:target) .arrow:after,
+#body:not(:target) .arrow{
+    display: none;
 }
 
 #body:target .description {
@@ -239,4 +278,6 @@ address {
     transition: 0.4s;
 }
 
-
+#body:target .active {
+    bottom: -120%;
+}
