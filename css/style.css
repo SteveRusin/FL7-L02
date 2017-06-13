@@ -1,0 +1,242 @@
+* {
+    font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 5em;
+    color: #464547;
+    transform: scaleY(2);
+    text-align: center;
+}
+h1:before {
+    content: '<';
+}
+h1:after {
+    content: '>';
+}
+
+h1:before, h1:after {
+    color: #39c2d7;
+    display: inline-block;
+    transform: translateY(0.2ex);
+}
+
+main {
+    position: relative;
+    max-width: 1535px;
+    margin: 0 auto;
+}
+
+article {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: 45%;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    
+
+
+}
+
+figure:hover figcaption {
+    bottom: 0;
+}
+
+figcaption {
+    position: absolute;
+    bottom: -100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 120%;
+    -webkit-transition: 0.4s;
+       -moz-transition: 0.4s;
+         -o-transition: 0.4s;
+            transition: 0.4s;
+}
+
+
+a[href="#body"] {
+    color: white;
+    text-decoration: none;
+}
+
+.title, .title > span {
+    display: inline-block;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 1.5em;
+    word-spacing: 25em;
+}
+
+.title > span {
+    font-size: 4em;
+}
+
+.Ukraine {
+    background-image: url('../img/Ukraine.jpg');
+}
+
+.Armenia {
+    background-image: url('../img/Armenia.jpg');
+}
+
+.Belarus {
+    background-image: url('../img/Belarus.jpg');
+}
+
+.Hungary {
+    background-image: url('../img/Budapest.jpg');
+}
+
+.Canada {
+    background-image: url('../img/Canada.jpg');
+}
+
+.HongKong {
+    background-image: url('../img/HongKong.jpg');
+}
+
+.India {
+    background-image: url('../img/India.jpg');
+}
+
+.Mexico {
+    background-image: url('../img/Mexico.jpg');
+}
+
+.Netherlands {
+    background-image: url('../img/Netherlands.jpg');
+}
+
+.Switzerland {
+    background-image: url('../img/Switzerland.jpg');
+}
+
+.UK {
+    background-image: url('../img/United_kingdom.jpg');
+}
+
+.USA {
+    background-image: url('../img/USA.JPG');
+}
+
+.UA-d {
+    position: absolute;
+    background: #F7F7F7;
+    border: 1px solid #CCC;
+    width: 100%;
+    top: 350px;
+}
+
+
+.box {
+    width: 150px;
+    border-left: 1px solid #CCC;
+    height: 250px;
+    margin: 0px 50px 0 0;
+    padding-left: 50px;
+    
+}
+
+.box:nth-child(2) {
+    border: none;
+}
+
+h3 {
+    width: 5000px;
+    text-transform: uppercase;
+    color: #39c2d7;
+    font-size: 2em;
+    margin-left: 50px;
+    margin-bottom: 0;
+}
+
+h4 {
+    width: 130%;
+    color: #464547;
+}
+
+h4:before {
+    display: inline-block;
+    content: url('../img/map-location-icon.png');
+    padding-right: 5px;
+    transform: translateY(3px);
+}
+
+.phone a, address {
+    font-style: normal;
+    color: #636364;
+}
+
+
+address {
+    margin-left: 18px;
+}
+
+.map {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #7D9639;
+}
+
+.map:hover {
+    text-decoration: underline;
+}
+
+.phone {
+    width: 120%;
+}
+
+.phone a:hover {
+    text-decoration: none;
+}
+
+.map, .phone {
+    margin-top: 10px;
+}
+
+.close {
+    text-decoration: none;
+    color: #919191;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+#body:not(:target) .description {
+    height: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#body:target .description {
+    height: 0;
+    opacity: 1;
+    height: calc(100rem - 65vw);
+    transition: 0.4s;
+}
+
+
